@@ -1,16 +1,14 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- * Description of cliente
- *
- * @author tallyson
- */
-class cliente {
-    //put your code here
+class Cliente {
+    
+    public $dados;
+    
+    public function dados ($dados){
+        echo    'Nome: '.$dados[0].'<br/>'.
+                'CPF: '.$dados[1].'<br/>'.
+                'Endere&ccedilo: '.$dados[2].'<br/>'.
+                'Telefone: '.$dados[3];
+    }
 }
