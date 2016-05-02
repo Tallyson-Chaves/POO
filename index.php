@@ -24,13 +24,13 @@ $cliente = new Cliente();
                 <?php if ($ord==0): ?>
                     <?php $i = 0; while ($i <= 9): ?>
                     <?php $link="pagina.php?id=".$i;?>
-                <button type="button" class="list-group-item"><a href="<?php echo $link;?>"><?php echo $cliente->getDados($i, 0)?></a></button>
+                        <a class="list-group-item" href="<?php echo $link;?>"><?php echo $cliente->getDados($i, 0)?></a>
                     <?php $link="pagina.php?id=".$i;$i++ ?>
                     <?php endwhile; ?>
                 <?php else: ?>
                     <?php $i = 9; while ($i >= 0): ?>
                     <?php $link="pagina.php?id=".$i;?>
-                    <button type="button" class="list-group-item"><a href="<?php echo $link;?>"><?php echo $cliente->getDados($i, 0)?></a></button>
+                        <a class="list-group-item" href="<?php echo $link;?>"><?php echo $cliente->getDados($i, 0)?></a>
                     <?php $link="pagina.php?id=".$i;$i-- ?>
                     <?php endwhile; ?>
                 <?php endif; ?>

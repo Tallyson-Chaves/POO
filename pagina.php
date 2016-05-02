@@ -1,8 +1,8 @@
 <?php
+
 $id = $_GET['id'];
 
 require_once 'classes/cliente.php';
-require_once 'database/dados.php';
 
 $cliente = new Cliente();
 
