@@ -3,6 +3,9 @@ $id = $_GET['id'];
 
 require_once 'classes/cliente.php';
 require_once 'database/dados.php';
+
+$cliente = new Cliente();
+
 ?>
 
 <!DOCTYPE html>
@@ -28,10 +31,10 @@ require_once 'database/dados.php';
                 </thead>
                 <tbody>
                     <th scope="row"><?php echo $id ?></th>
-                    <td><?php echo $dados[$id][0]; ?></td>
-                    <td><?php echo $dados[$id][1]; ?></td>
-                    <td><?php echo $dados[$id][2]; ?></td>
-                    <td><?php echo $dados[$id][3]; ?></td>
+                    <td><?php echo $cliente->getDados($id, 0) ?></td>
+                    <td><?php echo $cliente->getDados($id, 1) ?></td>
+                    <td><?php echo $cliente->getDados($id, 2) ?></td>
+                    <td><?php echo $cliente->getDados($id, 3) ?></td>
                 </tbody>
             </table>
             <center><a class="btn btn-primary btn-lg" href="index.php">Voltar</a></center>

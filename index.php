@@ -1,8 +1,9 @@
 <?php
 require_once 'classes/cliente.php';
-require_once 'database/dados.php';
 
 $ord = $_GET['id'];
+
+$cliente = new Cliente();
 
 ?>
 
@@ -23,13 +24,13 @@ $ord = $_GET['id'];
                 <?php if ($ord==0): ?>
                     <?php $i = 0; while ($i <= 9): ?>
                     <?php $link="pagina.php?id=".$i;?>
-                    <button type="button" class="list-group-item"><a href="<?php echo $link;?>"><?php echo $dados[$i][0]?></a></button>
+                <button type="button" class="list-group-item"><a href="<?php echo $link;?>"><?php echo $cliente->getDados($i, 0)?></a></button>
                     <?php $link="pagina.php?id=".$i;$i++ ?>
                     <?php endwhile; ?>
                 <?php else: ?>
                     <?php $i = 9; while ($i >= 0): ?>
                     <?php $link="pagina.php?id=".$i;?>
-                    <button type="button" class="list-group-item"><a href="<?php echo $link;?>"><?php echo $dados[$i][0]?></a></button>
+                    <button type="button" class="list-group-item"><a href="<?php echo $link;?>"><?php echo $cliente->getDados($i, 0)?></a></button>
                     <?php $link="pagina.php?id=".$i;$i-- ?>
                     <?php endwhile; ?>
                 <?php endif; ?>
